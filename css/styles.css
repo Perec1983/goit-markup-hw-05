@@ -691,6 +691,7 @@ header-link::after {
 .modal-close:focus {
   background-color: var(--link-color);
   border: none;
+  fill: var(--white-color);
 }
 
 .is-hidden {
