@@ -565,7 +565,7 @@ header-link::after {
 
 .gallery-list-link:hover .gallery-cover-text,
 .gallery-list-link:focus .gallery-cover-text {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 .gallery-item {
