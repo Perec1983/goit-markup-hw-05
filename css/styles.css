@@ -665,17 +665,15 @@ header-link::after {
 }
 
 .modal-close {
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 24px;
   right: 24px;
-  bottom: 24px;
-  left: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--border-color);
-  padding: 0;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 24px;
