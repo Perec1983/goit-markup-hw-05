@@ -576,8 +576,7 @@ header-link::after {
 .gallery-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translateY(0);
-  }
+}
 
 .gallery-container {
   padding: 32px 16px;
@@ -647,34 +646,51 @@ header-link::after {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   top: 0;
-  transition: opacity 300ms linear, visibility 300ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   width: 408px;
   min-height: 584px;
   background-color: var(--background-model);
   border-radius: 4px;
   padding: 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #434455;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 300ms leaner;
-  display: block;
-  margin-left: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--border-color);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--link-color);
+  border: none;
 }
 
 .is-hidden {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
