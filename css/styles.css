@@ -563,8 +563,8 @@ header-link::after {
   overflow: hidden;
 }
 
-.gallery-list-link:hover .gallery-cover-text,
-.gallery-list-link:focus .gallery-cover-text {
+.gallery-item:hover .gallery-cover-text,
+.gallery-item:focus .gallery-cover-text {
   transform: translateY(0%);
 }
 
